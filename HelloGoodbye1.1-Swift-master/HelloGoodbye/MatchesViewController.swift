@@ -219,12 +219,13 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
         }
     }
     
-    private func fadeCardIntoView() {
+    // Accessibility Demo - Step 4 // Reducing motion effect
+   /* private func fadeCardIntoView() {
         cardView.alpha = 0.0
         UIView.animate(withDuration: FadeAnimationDuration) {
             self.cardView.alpha = 1.0
         }
-    }
+    } */
     
     private func animateCards(forHello: Bool) {
         animateCardOffScreen(toTop: forHello) {
@@ -235,14 +236,14 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
                 
                 // Ensure that the view's layout is up to date before we animate it
                 self.view.layoutIfNeeded()
-                
-                if UIAccessibilityIsReduceMotionEnabled() {
+                // Accessibility Demo - Step 4 // Reducing motion effect
+               /* if UIAccessibilityIsReduceMotionEnabled() {
                     // Fade the card into view
                     self.fadeCardIntoView()
-                } else {
+                } else { */
                     // Zoom the new card from a tiny point into full view
                     self.zoomCardIntoView()
-                }
+               // }
             } else {
                 // Hide the card
                 self.cardView.isHidden = true
