@@ -140,7 +140,8 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
         swipeInstructionsLabel.font = StyleUtilities.largeFont
         overlayView.addSubview(swipeInstructionsLabel)
         swipeInstructionsLabel.text = NSLocalizedString("Swipe ↑ to say \"Hello!\"\nSwipe ↓ to say \"Goodbye...\"", comment: "Instructions for the Matches page")
-        swipeInstructionsLabel.accessibilityLabel = NSLocalizedString("Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"", comment: "Accessibility instructions for the Matches page")
+        // Accessibility Demo - Step 7 // enabling accessibility label on swipe instruction
+        /*swipeInstructionsLabel.accessibilityLabel = NSLocalizedString("Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"", comment: "Accessibility instructions for the Matches page")*/
         
         let overlayMargin = StyleUtilities.overlayMargin
         let topMarginConstraint = NSLayoutConstraint(item: overlayView, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1.0, constant: overlayMargin)

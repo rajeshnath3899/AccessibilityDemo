@@ -56,8 +56,9 @@ class CardView: UIView {
     
     private func addProfileViews() {
         photo = UIImageView()
-        photo.isAccessibilityElement = true
-        photo.accessibilityLabel =  NSLocalizedString("Profile photo", comment: "Accessibility label for profile photo")
+        // Accessibility Demo - Step 6
+       /* photo.isAccessibilityElement = true
+        photo.accessibilityLabel =  NSLocalizedString("Profile photo", comment: "Accessibility label for profile photo") */
         photo.translatesAutoresizingMaskIntoConstraints = false
         addSubview(photo)
         
