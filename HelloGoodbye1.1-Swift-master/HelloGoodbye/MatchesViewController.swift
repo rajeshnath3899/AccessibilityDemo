@@ -113,12 +113,14 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
         let swipeDownRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(MatchesViewController.handleSwipeDown(_:)))
         swipeDownRecognizer.direction = .down
         cardView.addGestureRecognizer(swipeDownRecognizer)
-        
+        // Accessibility Demo - Step 21 // Custom actions
+        /*
         let helloAction = UIAccessibilityCustomAction(name: NSLocalizedString("Say hello", comment: "Accessibility action to say hello"), target: self, selector: #selector(MatchesViewController.sayHello))
         let goodbyeAction = UIAccessibilityCustomAction(name: NSLocalizedString("Say goodbye", comment: "Accessibility action to say goodbye"), target: self, selector: #selector(MatchesViewController.sayGoodbye))
         for element in cardView.accessibilityElements as! [UIView] {
             element.accessibilityCustomActions = [helloAction, goodbyeAction]
         }
+ */
         
         return cardView
     }
@@ -255,11 +257,11 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
                     self.allMatchesViewedExplanatoryView.alpha = 1.0
                 }
             }
-            
-            UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)
+            // Accessibility Demo - Step 19 // notifying layout change
+            /*UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)*/
         }
     }
-    
+  
     @discardableResult
     @objc private func sayHello() -> Bool {
         animateCards(forHello: true)
@@ -270,7 +272,7 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
     @objc private func sayGoodbye() ->Bool {
         animateCards(forHello: false)
         return true
-    }
+    } 
     
     let UIGestureRecognizerStateRecognized = UIGestureRecognizerState.ended
     @objc func handleSwipeUp(_ gestureRecognizer: UISwipeGestureRecognizer!) {

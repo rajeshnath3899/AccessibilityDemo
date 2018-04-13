@@ -81,9 +81,9 @@ class CardView: UIView {
         
         elevatorPitchValueLabel = StyleUtilities.detailLabel()
         addSubview(elevatorPitchValueLabel)
-        
-        accessibilityElements = [photo, ageTitleLabel, ageValueLabel, hobbiesTitleLabel, hobbiesValueLabel,
-            elevatorPitchTitleLabel, elevatorPitchValueLabel]
+        // Accessibility Demo Step - 18 // rearranged the order of accessibile elements
+       /* accessibilityElements = [photo, ageTitleLabel, ageValueLabel, hobbiesTitleLabel, hobbiesValueLabel,
+            elevatorPitchTitleLabel, elevatorPitchValueLabel] */
     }
     
     private func addAllConstraints() {
