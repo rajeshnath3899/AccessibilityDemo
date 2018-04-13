@@ -27,7 +27,7 @@ private let CardRevealAnimationDuration: TimeInterval = 0.3
 
 @objc(AAPLProfileViewController)
 class ProfileViewController: AAPLPhotoBackgroundViewController,
-    UITextFieldDelegate, PreviewLabelDelegate
+    UITextFieldDelegate /*, PreviewLabelDelegate */ //  // Acccessbility Demo - Step 14
 {
     
     private var person: Person!
@@ -93,7 +93,8 @@ class ProfileViewController: AAPLPhotoBackgroundViewController,
     
     private func addAgeValueLabel(to overlayView: UIView) -> UILabel {
         let ageValueLabel = StyleUtilities.standardLabel()
-        ageValueLabel.isAccessibilityElement = false
+        // Accessibility Demo Step 9
+        /* ageValueLabel.isAccessibilityElement = false */
         overlayView.addSubview(ageValueLabel)
         return ageValueLabel
     }
@@ -180,7 +181,8 @@ class ProfileViewController: AAPLPhotoBackgroundViewController,
     
     private func addPreviewLabel() -> PreviewLabel {
         let previewLabel = PreviewLabel()
-        previewLabel.delegate = self
+        // Acccessbility Demo - Step 15
+       /* previewLabel.delegate = self */
         view.addSubview(previewLabel)
         return previewLabel
     }
@@ -251,7 +253,8 @@ class ProfileViewController: AAPLPhotoBackgroundViewController,
             self.cardRevealConstraint.constant = -self.cardHeight
             self.view.layoutIfNeeded()
             }) {finished in
-                UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)
+                 // Acccessbility Demo - Step 17 notifying the layout changed
+               /* UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil) */
         }
     }
     
@@ -261,7 +264,8 @@ class ProfileViewController: AAPLPhotoBackgroundViewController,
             self.cardRevealConstraint.constant = 0.0
             self.view.layoutIfNeeded()
             }) {finished in
-                UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)
+                // Acccessbility Demo - Step 18 notifying the layout changed
+               /* UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil) */
         }
     }
     
@@ -328,13 +332,13 @@ class ProfileViewController: AAPLPhotoBackgroundViewController,
     }
     
     //MARK: - AAPLPreviewLabelDelegate
-    
-    func didActivate(_ previewLabel: PreviewLabel) {
+     // Acccessbility Demo - Step 16
+   /* func didActivate(_ previewLabel: PreviewLabel) {
         if isCardRevealed {
             dismissCard()
         } else {
             revealCard()
         }
-    }
+    } */
     
 }
