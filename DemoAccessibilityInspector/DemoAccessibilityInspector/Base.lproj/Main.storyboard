@@ -25,7 +25,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guy1" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-Vr-EPH">
                                 <rect key="frame" x="24" y="225" width="119" height="112"/>
-                                <accessibility key="accessibilityConfiguration" label="Profile Image">
+                                <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
@@ -50,6 +50,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04T-mT-V2r">
                                 <rect key="frame" x="244" y="254" width="21" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="M2B-TT-MEt"/>
                                 </constraints>
