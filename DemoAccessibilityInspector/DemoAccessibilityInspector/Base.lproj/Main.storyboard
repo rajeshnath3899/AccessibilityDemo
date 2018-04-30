@@ -127,6 +127,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bkN-Aj-nQh"/>
                     <connections>
+                        <outlet property="buttonInvite" destination="s0Q-Sa-8rK" id="bNa-Sb-AcD"/>
                         <outlet property="labelAge" destination="tjc-yj-ibY" id="5Nt-TP-36j"/>
                         <outlet property="labelAgeValue" destination="04T-mT-V2r" id="R9G-vk-erm"/>
                         <outlet property="labelElevatorPitch" destination="ybu-8x-HZg" id="dOs-RI-65R"/>
