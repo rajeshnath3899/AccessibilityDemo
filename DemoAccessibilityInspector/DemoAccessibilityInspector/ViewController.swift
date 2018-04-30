@@ -68,9 +68,9 @@ class ViewController: UIViewController {
         
         labelAgeValue.font = UIFont.preferredFont(forTextStyle: .body)
         labelAgeValue.adjustsFontForContentSizeCategory = true
-        
+        /*
         buttonInvite.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
-        buttonInvite.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonInvite.titleLabel?.adjustsFontForContentSizeCategory = true */
         
     }
     
