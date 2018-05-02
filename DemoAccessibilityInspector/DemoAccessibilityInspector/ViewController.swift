@@ -71,7 +71,6 @@ class ViewController: UIViewController {
         /*
         buttonInvite.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
         buttonInvite.titleLabel?.adjustsFontForContentSizeCategory = true */
-        
     }
     
     
