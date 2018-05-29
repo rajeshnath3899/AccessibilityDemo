@@ -34,7 +34,7 @@ class ShoppersListTableViewController: UITableViewController {
                 
                 // helper for search
                 
-                let nextSearchRow = {(row:Int) -> Int in forwards ? row + 1 : row-1}
+                let nextSearchRow = {(row:Int) -> Int in forwards ? row + 1 : row - 1}
                 
                 // search for a offerr in the correct direction
                 
