@@ -118,6 +118,8 @@ class ShoppersListTableViewController: UITableViewController {
             let offerImageView = UIImageView.init(image: UIImage.init(named: "Special_Offer.png"))
             cell.accessoryView = offerImageView
             
+        } else {
+            cell.accessoryView = nil
         }
         
         return cell
