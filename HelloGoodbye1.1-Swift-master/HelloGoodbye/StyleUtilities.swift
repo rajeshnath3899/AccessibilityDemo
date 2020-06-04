@@ -116,13 +116,13 @@ class StyleUtilities: NSObject {
     }*/
     
     class var standardFont: UIFont {
-        return UIFont(name: "Avenir-Light", size:14.0)!
-      /* return UIFont(name: fontName, size:14.0)! */
+        return UIFont(name: "Avenir-Light", size:14.0) ?? UIFont()
+      /* return UIFont(name: fontName, size:14.0) ?? UIFont() */
     }
     
     class var largeFont: UIFont {
-        return UIFont(name: "Avenir-Light", size: 18.0)!
-       /* return UIFont(name: fontName, size: 18.0)! */
+        return UIFont(name: "Avenir-Light", size: 18.0) ?? UIFont()
+       /* return UIFont(name: fontName, size: 18.0) ?? UIFont() */
     }
     
     class func standardLabel() -> UILabel {
