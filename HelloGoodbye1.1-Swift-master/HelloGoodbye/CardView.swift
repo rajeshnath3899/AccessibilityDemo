@@ -37,7 +37,8 @@ class CardView: UIView {
     private var elevatorPitchTitleLabel:UILabel!
     private var elevatorPitchValueLabel:UILabel!
     private var photoAspectRatioConstraint:NSLayoutConstraint!
-    
+
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = StyleUtilities.cardBorderColor
@@ -46,10 +47,10 @@ class CardView: UIView {
         backgroundView.backgroundColor = StyleUtilities.cardBackgroundColor
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(backgroundView)
-        
         addProfileViews()
         addAllConstraints()
     }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -57,8 +58,8 @@ class CardView: UIView {
     private func addProfileViews() {
         photo = UIImageView()
         // Accessibility Demo - Step 6
-       /* photo.isAccessibilityElement = true
-        photo.accessibilityLabel =  NSLocalizedString("Profile photo", comment: "Accessibility label for profile photo") */
+        photo.isAccessibilityElement = true
+        photo.accessibilityLabel =  NSLocalizedString("Profile photo", comment: "Accessibility label for profile photo")
         photo.translatesAutoresizingMaskIntoConstraints = false
         addSubview(photo)
         
@@ -82,8 +83,8 @@ class CardView: UIView {
         elevatorPitchValueLabel = StyleUtilities.detailLabel()
         addSubview(elevatorPitchValueLabel)
         // Accessibility Demo Step - 18 // rearranged the order of accessibile elements
-       /* accessibilityElements = [photo, ageTitleLabel, ageValueLabel, hobbiesTitleLabel, hobbiesValueLabel,
-            elevatorPitchTitleLabel, elevatorPitchValueLabel] */
+        accessibilityElements = [photo, ageTitleLabel, ageValueLabel, hobbiesTitleLabel, hobbiesValueLabel,
+            elevatorPitchTitleLabel, elevatorPitchValueLabel]
     }
     
     private func addAllConstraints() {

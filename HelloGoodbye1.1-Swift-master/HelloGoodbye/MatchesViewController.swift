@@ -114,14 +114,13 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
         swipeDownRecognizer.direction = .down
         cardView.addGestureRecognizer(swipeDownRecognizer)
         // Accessibility Demo - Step 21 // Custom actions
-        /*
+        
         let helloAction = UIAccessibilityCustomAction(name: NSLocalizedString("Say hello", comment: "Accessibility action to say hello"), target: self, selector: #selector(MatchesViewController.sayHello))
         let goodbyeAction = UIAccessibilityCustomAction(name: NSLocalizedString("Say goodbye", comment: "Accessibility action to say goodbye"), target: self, selector: #selector(MatchesViewController.sayGoodbye))
         for element in cardView.accessibilityElements as! [UIView] {
             element.accessibilityCustomActions = [helloAction, goodbyeAction]
         }
- */
-        
+
         return cardView
     }
     
@@ -143,7 +142,7 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
         overlayView.addSubview(swipeInstructionsLabel)
         swipeInstructionsLabel.text = NSLocalizedString("Swipe ↑ to say \"Hello!\"\nSwipe ↓ to say \"Goodbye...\"", comment: "Instructions for the Matches page")
         // Accessibility Demo - Step 7 // enabling accessibility label on swipe instruction
-        /*swipeInstructionsLabel.accessibilityLabel = NSLocalizedString("Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"", comment: "Accessibility instructions for the Matches page")*/
+        swipeInstructionsLabel.accessibilityLabel = NSLocalizedString("Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"", comment: "Accessibility instructions for the Matches page")
         
         let overlayMargin = StyleUtilities.overlayMargin
         let topMarginConstraint = NSLayoutConstraint(item: overlayView, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1.0, constant: overlayMargin)
@@ -223,12 +222,12 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
     }
     
     // Accessibility Demo - Step 4 // Reducing motion effect
-   /* private func fadeCardIntoView() {
+   private func fadeCardIntoView() {
         cardView.alpha = 0.0
         UIView.animate(withDuration: FadeAnimationDuration) {
             self.cardView.alpha = 1.0
         }
-    } */
+    }
     
     private func animateCards(forHello: Bool) {
         animateCardOffScreen(toTop: forHello) {
@@ -240,13 +239,13 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
                 // Ensure that the view's layout is up to date before we animate it
                 self.view.layoutIfNeeded()
                 // Accessibility Demo - Step 4 // Reducing motion effect
-               /* if UIAccessibilityIsReduceMotionEnabled() {
+                if UIAccessibilityIsReduceMotionEnabled() {
                     // Fade the card into view
                     self.fadeCardIntoView()
-                } else { */
+                } else {
                     // Zoom the new card from a tiny point into full view
                     self.zoomCardIntoView()
-               // }
+                }
             } else {
                 // Hide the card
                 self.cardView.isHidden = true
@@ -258,7 +257,7 @@ class MatchesViewController: AAPLPhotoBackgroundViewController {
                 }
             }
             // Accessibility Demo - Step 19 // notifying layout change
-            /*UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)*/
+            UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil)
         }
     }
   

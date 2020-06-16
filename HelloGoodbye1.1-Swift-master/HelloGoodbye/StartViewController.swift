@@ -41,8 +41,8 @@ class StartViewController: AAPLPhotoBackgroundViewController {
         containerView.addSubview(logoOverlayView)
         //Accessibility Demo - Step 5 // make logo accessible
         let logo = UIImageView(image: UIImage(named: "logo"))
-       /* logo.isAccessibilityElement = true
-        logo.accessibilityLabel = NSLocalizedString("Hello goodbye, meet your match", comment: "Logo description") */
+        logo.isAccessibilityElement = true
+        logo.accessibilityLabel = NSLocalizedString("Hello goodbye, meet your match", comment: "Logo description")
         logo.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(logo)
         

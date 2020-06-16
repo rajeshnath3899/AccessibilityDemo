@@ -17,19 +17,18 @@
 
 import UIKit
 // Acccessbility Demo - Step 10 // activate below method when preview label is tapped
-/*
+
 @objc(AAPLPreviewLabelDelegate)
 protocol PreviewLabelDelegate: NSObjectProtocol {
     
     func didActivate(_ previewLabel: PreviewLabel)
     
 }
- */
 
 @objc(AAPLPreviewLabel)
 class PreviewLabel: UILabel {
      // Acccessbility Demo - Step 11
-   /* weak var delegate: PreviewLabelDelegate? */
+   weak var delegate: PreviewLabelDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,19 +40,18 @@ class PreviewLabel: UILabel {
         super.init(coder: aDecoder)
     }
     // Acccessbility Demo - Step 12
-   /* override func accessibilityActivate() -> Bool {
+   override func accessibilityActivate() -> Bool {
         delegate?.didActivate(self)
         return false
     }
-    */
     // Acccessbility Demo - Step 13
-   /* override var accessibilityTraits:UIAccessibilityTraits {
+   override var accessibilityTraits:UIAccessibilityTraits {
         get {
             return super.accessibilityTraits | UIAccessibilityTraitButton
         }
         set {
             super.accessibilityTraits = newValue
         }
-    }*/
+    }
     
 }

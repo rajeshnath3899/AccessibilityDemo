@@ -14,16 +14,6 @@
 	</dict>
 	<dict>
 		<key>photo</key>
-		<string>guy2</string>
-		<key>age</key>
-		<integer>38</integer>
-		<key>hobbies</key>
-		<string>Sightseeing, drawing, architecture</string>
-		<key>elevatorPitch</key>
-		<string>Thrice divorced, thrice as experienced in love.</string>
-	</dict>
-	<dict>
-		<key>photo</key>
 		<string>guy3</string>
 		<key>age</key>
 		<integer>23</integer>

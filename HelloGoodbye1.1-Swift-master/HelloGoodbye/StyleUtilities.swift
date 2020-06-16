@@ -33,9 +33,9 @@ class StyleUtilities: NSObject {
     
     class var overlayColor: UIColor {
         // Accessibility Demo - Step 2 enabling transperancy
-       /* if UIAccessibilityIsReduceTransparencyEnabled() {
+       if UIAccessibilityIsReduceTransparencyEnabled() {
             return UIColor.white
-        } */
+        }
         return UIColor(white:1.0, alpha:0.8)
     }
     
@@ -49,9 +49,9 @@ class StyleUtilities: NSObject {
     
     class var detailColor: UIColor {
         // Accessibilty Demo - Step 3 // enabling darken colors
-       /* if UIAccessibilityDarkerSystemColorsEnabled() {
+       if UIAccessibilityDarkerSystemColorsEnabled() {
             return UIColor.black
-        } */
+        }
         return UIColor.gray
     }
     
@@ -107,22 +107,22 @@ class StyleUtilities: NSObject {
     }
     
     // Accessibility Demo - Step 1 : Bold Text enabling
-    /*
+    
     class var fontName: String {
         if UIAccessibilityIsBoldTextEnabled() {
             return "Avenir-Medium"
         }
         return "Avenir-Light"
-    }*/
+    }
     
     class var standardFont: UIFont {
-        return UIFont(name: "Avenir-Light", size:14.0) ?? UIFont()
-      /* return UIFont(name: fontName, size:14.0) ?? UIFont() */
+        // return UIFont(name: "Avenir-Light", size:14.0) ?? UIFont()
+        return UIFont(name: fontName, size:14.0) ?? UIFont()
     }
     
     class var largeFont: UIFont {
-        return UIFont(name: "Avenir-Light", size: 18.0) ?? UIFont()
-       /* return UIFont(name: fontName, size: 18.0) ?? UIFont() */
+        // return UIFont(name: "Avenir-Light", size: 18.0) ?? UIFont()
+        return UIFont(name: fontName, size: 18.0) ?? UIFont()
     }
     
     class func standardLabel() -> UILabel {

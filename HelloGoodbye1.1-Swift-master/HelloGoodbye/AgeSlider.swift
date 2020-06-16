@@ -30,7 +30,7 @@ class AgeSlider: UISlider {
         super.init(coder: aDecoder)
     }
     // accessibility Demo - Step 8 // adding accessibility value
-   /* override var accessibilityValue: String? {
+   override var accessibilityValue: String? {
         get {
             // Return the age as a number, not as a percentage
             return NumberFormatter.localizedString(from: value as NSNumber, number: .decimal)
@@ -38,9 +38,9 @@ class AgeSlider: UISlider {
         set {
             super.accessibilityValue = newValue
         }
-    } */
+    }
     // accessibility Demo - Step 9 // adding accessibility increment & decrement
-    /*override func accessibilityIncrement() {
+    override func accessibilityIncrement() {
         value += 1
         sendActions(for: .valueChanged)
     }
@@ -49,6 +49,5 @@ class AgeSlider: UISlider {
         value -= 1
         sendActions(for: .valueChanged)
     }
- */
     
 }

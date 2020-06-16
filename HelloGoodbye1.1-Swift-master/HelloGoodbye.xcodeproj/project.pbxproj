@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D62692819144D0E00039EE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D62692619144D0E00039EE7 /* Localizable.strings */; };
 		3D69DDA01915C45000DF2BDD /* matches.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D69DD9F1915C45000DF2BDD /* matches.plist */; };
 		3DD4F0DF191419EC0033E0C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4F0DE191419EC0033E0C2 /* Images.xcassets */; };
 		D70C593B1E100062005312C0 /* PreviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B228AF1A628B6700FB8BAD /* PreviewLabel.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D62692719144D0E00039EE7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D6840E71978E18600D63065 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3D69DD9F1915C45000DF2BDD /* matches.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = matches.plist; sourceTree = "<group>"; };
 		3DD4F0D3191419EC0033E0C2 /* HelloGoodbye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloGoodbye.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,6 @@
 				D7B228B01A628B6700FB8BAD /* ProfileViewController.swift */,
 				D7B228B11A628B6700FB8BAD /* StartViewController.swift */,
 				D7B228B21A628B6700FB8BAD /* StyleUtilities.swift */,
-				3D62692619144D0E00039EE7 /* Localizable.strings */,
 				3DD4F0DE191419EC0033E0C2 /* Images.xcassets */,
 				D7F1AA7B1B41A996000DBF82 /* LaunchScreen.storyboard */,
 				3D69DD9F1915C45000DF2BDD /* matches.plist */,
@@ -148,7 +145,9 @@
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					3DD4F0D2191419EC0033E0C2 = {
+						DevelopmentTeam = 2KVHUY877M;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -157,6 +156,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3DD4F0C9191419EC0033E0C2;
@@ -176,7 +176,6 @@
 			files = (
 				D7B915951A7675AE002949C6 /* LICENSE.txt in Resources */,
 				3DD4F0DF191419EC0033E0C2 /* Images.xcassets in Resources */,
-				3D62692819144D0E00039EE7 /* Localizable.strings in Resources */,
 				D7F1AA7C1B41A996000DBF82 /* LaunchScreen.storyboard in Resources */,
 				3D69DDA01915C45000DF2BDD /* matches.plist in Resources */,
 			);
@@ -203,17 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3D62692619144D0E00039EE7 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D62692719144D0E00039EE7 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3DD4F0EC191419EC0033E0C2 /* Debug */ = {
@@ -327,11 +315,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KVHUY877M;
 				INFOPLIST_FILE = HelloGoodbye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quest1-global.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,11 +335,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KVHUY877M;
 				INFOPLIST_FILE = HelloGoodbye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quest1-global.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
